@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><library>
+    <books>
+        <book>
+            <author>
+                <lastName>Пушкин</lastName>
+                <name>Александр</name>
+                <patronymic>Сергеевич</patronymic>
+                <info>Писатель, годы жизни 1799-1837</info>
+            </author>
+            <dateOfPublishing>09.09.2015</dateOfPublishing>
+            <price>450</price>
+            <section>CLASSIC</section>
+            <title>Евгений Онегин</title>
+        </book>
+        <book>
+            <author>
+                <lastName>Пушкин</lastName>
+                <name>Алексей</name>
+                <patronymic>Сергеевич</patronymic>
+                <info>Писатель, годы жизни 1799-1837</info>
+            </author>
+            <dateOfPublishing>19.09.2013</dateOfPublishing>
+            <price>349.8</price>
+            <section>CLASSIC</section>
+            <title>Евгений Онегин</title>
+        </book>
+        <book>
+            <author>
+                <lastName>Брэдбери</lastName>
+                <name>Рэй</name>
+                <patronymic/>
+                <info>Писатель, годы жизни 1920-2010</info>
+            </author>
+            <dateOfPublishing>19.09.2008</dateOfPublishing>
+            <price>398.0</price>
+            <section>CLASSIC</section>
+            <title>451 градус по Фаренгейту</title>
+        </book>
+        <book>
+            <author>
+                <lastName>Толстой</lastName>
+                <name>Лев</name>
+                <patronymic>Николаевич</patronymic>
+                <info>Писатель, годы жизни 1828-1910</info>
+            </author>
+            <dateOfPublishing>23.09.2018</dateOfPublishing>
+            <price>1000.0</price>
+            <section>NOVEl</section>
+            <title>Война и мир</title>
+        </book>
+        <book>
+            <author>
+                <lastName>Зусак</lastName>
+                <name>Марк</name>
+                <patronymic/>
+                <info>Писатель, годы жизни 1975-</info>
+            </author>
+            <dateOfPublishing>23.09.2016</dateOfPublishing>
+            <price>1243.0</price>
+            <section>NOVEl</section>
+            <title>Книжный вор</title>
+        </book>
+    </books>
+    <name>Казанская гос библиотека</name>
+</library>

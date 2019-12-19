@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="321.534375" y="0.0">oodb.lab6.classes.Person</node>
+    <node x="111.33333333333326" y="173.0">oodb.lab6.classes.BooksInLibraries</node>
+    <node x="114.53437500000001" y="0.0">oodb.lab6.classes.Library</node>
+    <node x="320.53437499999995" y="178.0">oodb.lab6.classes.Author</node>
+    <node x="0.0" y="145.0">oodb.lab6.classes.Section</node>
+    <node x="103.61979166666663" y="376.0">oodb.lab6.classes.Book</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="oodb.lab6.classes.Book" target="oodb.lab6.classes.BooksInLibraries">
+      <point x="-68.99999999999997" y="-91.5" />
+      <point x="172.61979166666666" y="336.0" />
+      <point x="131.16666666666669" y="336.0" />
+      <point x="-46.333333333333314" y="47.5" />
+    </edge>
+    <edge source="oodb.lab6.classes.Library" target="oodb.lab6.classes.Book">
+      <point x="70.125" y="47.5" />
+      <point x="278.159375" y="120.0" />
+      <point x="270.90208333333334" y="120.0" />
+      <point x="270.90208333333334" y="356.0" />
+      <point x="283.01979166666666" y="356.0" />
+      <point x="41.400000000000034" y="-91.5" />
+    </edge>
+    <edge source="oodb.lab6.classes.Author" target="oodb.lab6.classes.Person">
+      <point x="41.25000000000003" y="-47.5" />
+      <point x="40.75" y="47.5" />
+    </edge>
+    <edge source="oodb.lab6.classes.BooksInLibraries" target="oodb.lab6.classes.Book">
+      <point x="46.33333333333337" y="47.5" />
+      <point x="223.83333333333337" y="356.0" />
+      <point x="227.81979166666667" y="356.0" />
+      <point x="-13.799999999999955" y="-91.5" />
+    </edge>
+    <edge source="oodb.lab6.classes.Book" target="oodb.lab6.classes.Author">
+      <point x="96.60000000000002" y="-91.5" />
+      <point x="338.21979166666665" y="346.0" />
+      <point x="403.03437499999995" y="346.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="oodb.lab6.classes.BooksInLibraries" target="oodb.lab6.classes.Library">
+      <point x="34.75" y="-47.5" />
+      <point x="212.25" y="120.0" />
+      <point x="184.659375" y="120.0" />
+      <point x="-23.375" y="47.5" />
+    </edge>
+    <edge source="oodb.lab6.classes.Author" target="oodb.lab6.classes.Book">
+      <point x="55.00000000000003" y="47.5" />
+      <point x="458.034375" y="356.0" />
+      <point x="365.8197916666666" y="356.0" />
+      <point x="124.19999999999999" y="-91.5" />
+    </edge>
+    <edge source="oodb.lab6.classes.Book" target="oodb.lab6.classes.Section">
+      <point x="-96.59999999999997" y="-91.5" />
+      <point x="145.01979166666666" y="346.0" />
+      <point x="66.0" y="346.0" />
+      <point x="22.0" y="80.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="244.80952380952374" y="405.83333333333326" />
+  <SelectedNodes>
+    <node>oodb.lab6.classes.BooksInLibraries</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
