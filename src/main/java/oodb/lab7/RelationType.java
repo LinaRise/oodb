@@ -5,5 +5,5 @@ public enum RelationType {
   ManyToOne,
   OneToMany,
   ManyToMany,
-  Enumerated
+
 }

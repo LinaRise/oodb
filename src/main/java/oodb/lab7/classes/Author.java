@@ -15,12 +15,12 @@ public class Author extends Person {
   Long id;
 
   @Column
-  private String info;
+   String info;
 
 
 
-  @OneToMany(rightSide = Book.class)
-  private List<Book> books;
+  @OneToMany
+   List<Book> book;
 
 
   //пустой конструктор тк ругается при чтении из файла
@@ -42,7 +42,7 @@ public class Author extends Person {
   }
 
   public String getFullName() {
-    return name + " " + patronymic + " " + lastName;
+    return name + " " + patronymic + " " + lastname;
   }
 
   public void setInfo(String info) {
@@ -53,7 +53,7 @@ public class Author extends Person {
   public String toString() {
     return "Автор {" +
             "информация ='" + info + '\'' +
-            ", ФИО ='" + lastName + " " + name + " " + patronymic + '}';
+            ", ФИО ='" + lastname + " " + name + " " + patronymic + '}';
   }
 
 

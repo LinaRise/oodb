@@ -13,11 +13,11 @@ public class SectionsTitles {
   Long id;
 
   @Column
-  String sectionTitle;
+  String sectionstitles;
 
 
-  @OneToMany(rightSide = Book.class)
-  private List<Book> books;
+  @OneToMany
+   List<Book> books;
 
 
 

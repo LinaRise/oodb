@@ -9,5 +9,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface OneToMany {
   String name() default "";
-  Class rightSide();
+
+
+
 }

@@ -5,11 +5,11 @@ import oodb.lab7.annotation.Column;
 
 abstract class Person {
   @Column
-  public String name;
+   String name;
   @Column
-  public String patronymic;
+   String patronymic;
   @Column
-  public String lastName;
+ String lastname;
 
 
   public Person() {
@@ -18,7 +18,7 @@ abstract class Person {
   Person(String name, String patronymic, String lastName) {
     this.name = name;
     this.patronymic = patronymic;
-    this.lastName = lastName;
+    this.lastname = lastName;
   }
 
 
@@ -40,10 +40,10 @@ abstract class Person {
   }
 
   public String getLastName() {
-    return lastName;
+    return lastname;
   }
 
   public void setLastName(String lastName) {
-    this.lastName = lastName;
+    this.lastname = lastName;
   }
 }
