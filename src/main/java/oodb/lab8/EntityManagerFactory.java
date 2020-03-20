@@ -1,63 +1,31 @@
 package oodb.lab8;
 
+
 import java.sql.Connection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Properties;
+import java.sql.SQLException;
+import java.util.*;
 
 public class EntityManagerFactory {
+  private Properties props;
+  private List classes;
 
-  /**
-   * Подключение к БД. Это подключение передается в класс реализацию EntityManager
-   * при его создании.
-   */
-  private Connection connection;
+  public EntityManagerFactory(Properties properties, String classPath) {
+    try {
+      this.props = properties;
+      LinkedHashMap<String, LinkedHashMap<String, String>> tablesPackage = ScanClasses.getInfoAboutClasses();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
 
-  /**
-   * Параметры подключения к базе данных:
-   * <p> url - путь к БД для JDBC драйвера (например "jdbc:postgresql://localhost:5432/lab8")
-   * <p> username - имя пользователя СУБД
-   * <p> password - пароль пользователя СУБД
-   */
-  private Properties dbProperties;
+  public EntityManager create() {
+    return new EntityManagerImpl(props, classes);
 
-  /**
-   * Структура для хранения сведений о базе данных (таблицы, их поля)
-   */
-  private HashMap<String, HashSet<String>> tables = new HashMap<>();
+  }
 
-  /**
-   * Конструктор класса
-   *
-   * @param dbProperties - параметры подключения к базе данных
-   */
-  public EntityManagerFactory(Properties dbProperties) {
-    this.dbProperties = dbProperties;
+  public void close() {
+     new EntityManagerImpl(props, classes).close();
   }
 
 
-  /**
-   * Метод создает, инициализирует экземпляр класса, реализующего EntityManager
-   */
-  public EntityManager createEntityManager() {
-    return null;
-  }
-  //Entity Manger entM = new entitiyManager()
-  //код для инициализации класса
-  //return entM
-
-  /**
-   * Метод создает (если еще не создано) и возвращает подключение к БД
-   */
-  private Connection getConnection() {
-    return null;
-  }
-
-  /**
-   * Метод сканирует структуру классов модели, структуру базы данных,
-   * сравнивает их и возвращает булевский результат сравнения
-   */
-  private boolean scanModel() {
-    return true;
-  }
 }
