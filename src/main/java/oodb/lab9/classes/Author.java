@@ -63,7 +63,10 @@ public class Author extends Person {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     Author author = (Author) o;
-    return Objects.equals(info, author.info);
+    return Objects.equals(name, author.name) &&
+            Objects.equals(patronymic, author.patronymic) &&
+            Objects.equals(lastname, author.lastname) &&
+            Objects.equals(info, author.info);
   }
 
   @Override

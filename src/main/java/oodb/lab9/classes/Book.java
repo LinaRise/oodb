@@ -5,6 +5,7 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity(name = "Book")
 public class Book implements Comparable<Book> {
@@ -24,14 +25,20 @@ public class Book implements Comparable<Book> {
   @Column(nullable = false)
   String title;
 
+  @Column(nullable = false, length = 20)
+  String UDC;
 
-  @Column(nullable = false)
+  @Column(nullable = false,length = 20)
+  String LBC;
+
+
+  @Temporal(TemporalType.DATE)
   Date dateofpublishing;
   @Column(nullable = false)
   Double price;
 
   @ManyToMany(mappedBy = "book")
-  Collection<Library> libraries;
+  Set<Library> libraries;
 
 
   //пустой конструктор тк ругается при чтении из файла
@@ -47,17 +54,36 @@ public class Book implements Comparable<Book> {
     this.id = id;
   }
 
-  @Override
-  public String toString() {
-    return "Book{" +
-            "id=" + id +
-            ", author=" + author +
-            ", sectionstitles=" + sectionstitles +
-            ", title='" + title + '\'' +
-            ", dateOfPublishing='" + dateofpublishing + '\'' +
-            ", price=" + price +
-            ", libraries=" + libraries +
-            '}';
+  public String getLBC() {
+    return LBC;
+  }
+
+  public void setLBC(String LBC) {
+    this.LBC = LBC;
+  }
+
+  public String getUDC() {
+    return UDC;
+  }
+
+  public void setUDC(String UDC) {
+    this.UDC = UDC;
+  }
+
+  public Date getDateofpublishing() {
+    return dateofpublishing;
+  }
+
+  public void setDateofpublishing(Date dateofpublishing) {
+    this.dateofpublishing = dateofpublishing;
+  }
+
+  public Set<Library> getLibraries() {
+    return libraries;
+  }
+
+  public void setLibraries(Set<Library> libraries) {
+    this.libraries = libraries;
   }
 
   public String getTitle() {
@@ -85,14 +111,21 @@ public class Book implements Comparable<Book> {
     this.sectionstitles = sectionstitles;
   }
 
-  public Collection<Library> getLibraries() {
-    return libraries;
-  }
 
-  public void setLibraries(Collection<Library> libraries) {
-    this.libraries = libraries;
+  @Override
+  public String toString() {
+    return "Book{" +
+            "id=" + id +
+            ", author=" + author +
+            ", sectionstitles=" + sectionstitles +
+            ", title='" + title + '\'' +
+            ", UDC='" + UDC + '\'' +
+            ", LBC='" + LBC + '\'' +
+            ", dateofpublishing=" + dateofpublishing +
+            ", price=" + price +
+            ", libraries=" + libraries +
+            '}';
   }
-
 
   public double getPrice() {
     return price;
@@ -113,7 +146,9 @@ public class Book implements Comparable<Book> {
             sectionstitles.equals(book.sectionstitles) &&
             Objects.equals(title, book.title) &&
             Objects.equals(author, book.author) &&
-            Objects.equals(dateofpublishing, book.dateofpublishing);
+            Objects.equals(dateofpublishing, book.dateofpublishing) &&
+            Objects.equals(UDC, book.UDC) &&
+            Objects.equals(LBC, book.LBC);
   }
 
   @Override
